@@ -1,5 +1,7 @@
+import portraitImage from './assets/PORTRAIT.png'
+
 export const profile = {
-  image: './src/assets/PORTRAIT.png',
+  image: portraitImage,
   name: 'Jehymeson Gil A. Oliveira',
   role: 'Desenvolvedor, Ilustrador, Músico e Game Dev',
   email: 'jehymes.gil@live.com',
