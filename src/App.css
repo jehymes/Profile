@@ -1,0 +1,139 @@
+.portfolio {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+}
+
+.hero {
+  padding: 2rem 0 3rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #8fb0ff;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0.75rem 0 1rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  max-width: max-content;
+  text-align: justify;
+  color: #d2d7e2;
+}
+
+.role {
+  margin: 0;
+  font-weight: 600;
+  color: #b9c7ea;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1.75rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #3d4663;
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  color: #e8ecf7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #4c7bff;
+  border-color: #4c7bff;
+}
+
+.section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.65rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #171d2b;
+  border: 1px solid #2a3148;
+  border-radius: 14px;
+  padding: 1.15rem;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.card p,
+.contact p {
+  margin: 0;
+  color: #c5ccda;
+}
+
+.contact a {
+  color: #9ec7ff;
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.social-links a {
+  border: 1px solid #3a4360;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-weight: 600;
+}
+
+.profile-image {
+  width: 10%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: #535d7e36;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
