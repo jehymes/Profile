@@ -56,8 +56,8 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
   align-items: center;
 }
 
@@ -70,11 +70,12 @@
 }
 
 .display-text {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 0.95;
   margin: 0 0 2rem;
   text-transform: uppercase;
   word-spacing: -0.05em;
+  word-break: break-word;
 }
 
 .intro {
@@ -94,16 +95,14 @@
 .hero-visual {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .portrait-container {
   position: relative;
-  width: 100%;
-  max-width: 500px;
-  min-height: 400px;
+  width: 60%;
+  max-width: 550px;
   aspect-ratio: 3/4;
+  margin: 0 auto;
 }
 
 .portrait-offset {
@@ -191,13 +190,12 @@
 .section-header h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .section-line {
   height: 2px;
   background-color: var(--border-color);
-  width: 100%;
+  flex: 1;
 }
 
 /* Grid & Cards */
@@ -345,6 +343,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -363,10 +362,21 @@
   animation: fadeUp 0.8s ease forwards;
 }
 
-.fade-up-delay-1 { animation: fadeUp 0.8s ease 0.1s both; }
-.fade-up-delay-2 { animation: fadeUp 0.8s ease 0.2s both; }
-.fade-up-delay-3 { animation: fadeUp 0.8s ease 0.3s both; }
-.fade-up-delay-4 { animation: fadeUp 0.8s ease 0.4s both; }
+.fade-up-delay-1 {
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.fade-up-delay-2 {
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.fade-up-delay-3 {
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.fade-up-delay-4 {
+  animation: fadeUp 0.8s ease 0.4s both;
+}
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
@@ -374,16 +384,19 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .hero-visual {
-    justify-content: flex-start;
     order: -1;
+    padding-right: 25px;
+    /* prevent shadow overflow cut-off */
   }
 
   .portrait-container {
-    max-width: 350px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
