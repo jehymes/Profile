@@ -69,11 +69,13 @@ function App() {
         </section>
 
         <section id="contato" className="section contact-section">
-          <h2>Vamos criar algo <br/><span className="accent-text">incrível juntos.</span></h2>
+          <h2>Vamos criar algo <br /><span className="accent-text">incrível juntos.</span></h2>
           <div className="contact-grid">
             <div className="contact-info">
               <p>Disponível para freelas, colaborações e projetos autorais.</p>
-              <a href={`mailto:${profile.email}`} className="email-link">{profile.email}</a>
+              {profile.email.map((email, index) => (
+                <a key={index} href={`mailto:${email}`} className="email-link">{email}</a>
+              ))}
             </div>
             <div className="social-links" aria-label="Links profissionais">
               {profile.links.filter(item => item.url).map((item) => (
@@ -91,8 +93,8 @@ function App() {
       </footer>
 
       {showTopBtn && (
-        <button 
-          className="back-to-top" 
+        <button
+          className="back-to-top"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Voltar ao topo"
         >
